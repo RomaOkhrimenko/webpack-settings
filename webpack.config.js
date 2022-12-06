@@ -18,7 +18,7 @@ module.exports = {
         open: true,
         hot: true
     },
-    entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
+    entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.ts')],
     output: {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
@@ -104,7 +104,17 @@ module.exports = {
                         presets: ['@babel/preset-env']
                     }
                 }
+            },
+            {
+                test: /\.ts$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'ts-loader'
+                }
             }
         ]
-    }
+    },
+    resolve: {
+        extensions: ['.ts', '.js']
+    },
 }
