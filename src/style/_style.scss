@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background;
+  color: $text-color;
+  user-select: none;
+  font-family: 'Monsterrat', sans-serif;
+}
+
+.image {
+  width: 300px;
+  height: 500px;
+  background-size: cover;
+  background-image: url("./assets/img/jpeg/dell-1o5MZblCP50-unsplash.jpg");
+}
